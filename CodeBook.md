@@ -4,6 +4,8 @@
 One of the most exciting areas in all of data science right now is wearable computing. The data linked to represents data collected from the accelerometers from the Samsung Galaxy S smartphone. A full description is available at the site where the data was obtained:
 http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones 
 
+This project helps develop tidy data from the given raw data in a wide format which can then be processed into narrow form based on the data analysis requirements.
+
 ##Raw data:
 The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. These time domain signals (prefix 't' to denote time) were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal was then separated into body and gravity acceleration signals (tBodyAcc-XYZ and tGravityAcc-XYZ) using another low pass Butterworth filter with a corner frequency of 0.3 Hz. 
 
@@ -50,6 +52,19 @@ For more information about this dataset contact: activityrecognition@smartlab.ws
 
 ##Processed data:
 The tidy data that is obtained is an independent tidy data set with the average of each variable for each activity and each subject. It contains the following columns:
+
 **Activity** - Either of the following activities: WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING
+
 **Subject** - One of the 30 subjects numbered 1-30
-**Columns 3:81** - Average mean of 79 measurements for each activity for each subject. The column names have been made descriptive and follow the following format [t/f]Measurement.Sensor.Function.Axis where t or f represent time based or fourier transform of the measure.
+
+**Columns 3:81** - Average mean of 79 measurements for each activity for each subject. The column names have been made descriptive and follow the following format [t/f]Measurement.Sensor.Function.Axis 
+
+where t or f represent time based or fourier transform of the measure.
+
+Measurement represents either of Body,Gravity or BodyJerk measurements.
+
+Sensor represents whether the reading is of Accelerometer(Acc) or Gyrometer(Gyro).
+
+Function represents either of Mean, Standard Deviation(Std) or MeanFrequency(MeanFreq).
+
+Axis represents X, Y, Z axes or the Euclidean Magnitude(Mag)
